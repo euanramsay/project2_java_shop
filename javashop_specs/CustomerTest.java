@@ -2,12 +2,14 @@ import javashop.*;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.*;
+import java.util.HashMap;
 
 public class CustomerTest{
   Customer customer;
   Product product;
   Shop shop;
   Sale sale;
+  HashMap<PaymentType, Integer> wallet = new HashMap<>();
 
   @Before 
   public void before() {
@@ -15,6 +17,7 @@ public class CustomerTest{
     product = new Product("Lemonade", 5);
     shop = new Shop("Lucys Lemonade", 0);
     sale = new Sale(customer, product, shop);
+    wallet.put(MASTERCARD, 300);
   }
 
   @Test
