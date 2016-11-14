@@ -29,7 +29,8 @@ public class CustomerTest{
 
   @Test
   public void canBuyProduct() {
-    customer.setMoney(customer.getMoney() - product.getCost());
+    // customer.setMoney(customer.getMoney() - product.getCost());
+    sale.generateSale();
     assertEquals(25, customer.getMoney());
   }
 

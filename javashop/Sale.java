@@ -3,7 +3,6 @@ package javashop;
 import java.util.Collections;
 
 public class Sale {
-
   private Customer customer;
   private Product product;
   private Shop shop;
@@ -14,6 +13,10 @@ public class Sale {
     this.shop = shop;
   }
 
-  
+  public void generateSale() {
+    customer.setMoney(customer.getMoney() - product.getCost());
+    shop.setSales(shop.getSales() + product.getCost());
+  }
+
 
 }
