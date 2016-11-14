@@ -2,21 +2,21 @@ package javashop;
 
 import java.util.Collections;
 
-public class Shop {
+public class Product {
   private String name;
-  public int sales;
+  private int cost;
 
-  public Shop(String name, int sales){
+  public Product(String name, int cost){
     this.name = name;
-    this.sales = sales;
+    this.cost = cost;
   }
 
   public String getName() {
     return name;
   }
 
-  public int getSales() {
-    return sales;
+  public int getCost() {
+    return cost;
   }
 
 }

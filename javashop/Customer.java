@@ -4,7 +4,7 @@ import java.util.Collections;
 
 public class Customer {
   private String name;
-  private int money;
+  public int money;
 
 public Customer(String name, int money){
   this.name = name;
@@ -18,6 +18,8 @@ public String getName() {
 public int getMoney() {
   return money;
 }
+
+
 
 }
 
