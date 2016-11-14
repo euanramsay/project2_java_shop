@@ -14,4 +14,6 @@ public class Sale {
     this.shop = shop;
   }
 
+  
+
 }
