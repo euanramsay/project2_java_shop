@@ -29,8 +29,8 @@ public class ShopTest{
 
   @Test
   public void canSellProduct() {
-    shop.sales = shop.getSales() + product.getCost();
-    assertEquals(5, shop.sales);
+    shop.setSales(shop.getSales() + product.getCost());
+    assertEquals(5, shop.getSales());
   }
 
 }

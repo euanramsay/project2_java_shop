@@ -4,7 +4,7 @@ import java.util.Collections;
 
 public class Customer {
   private String name;
-  public int money;
+  private int money;
 
 public Customer(String name, int money){
   this.name = name;
@@ -17,6 +17,14 @@ public String getName() {
 
 public int getMoney() {
   return money;
+}
+
+public void setName(String customerName) {
+  name = customerName;
+}
+
+public void setMoney(int customerMoney) {
+  money = customerMoney;
 }
 
 
