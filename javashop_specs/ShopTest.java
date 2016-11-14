@@ -16,4 +16,9 @@ public class ShopTest{
     assertEquals( "Lucys Lemonade", shop.getName() ); 
   }
 
+  @Test
+  public void howMuchInSales() {
+    assertEquals( 0, shop.getSales());
+  }
+
 }

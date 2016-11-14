@@ -16,4 +16,9 @@ public class CustomerTest{
     assertEquals( "Charlie Brown", customer.getName() ); 
   }
 
+  @Test
+  public void howMuchMoney() {
+    assertEquals(30, customer.getMoney()) ;
+  }
+
 }

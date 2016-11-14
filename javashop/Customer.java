@@ -15,5 +15,9 @@ public String getName() {
   return name;
 }
 
+public int getMoney() {
+  return money;
+}
+
 }
 
