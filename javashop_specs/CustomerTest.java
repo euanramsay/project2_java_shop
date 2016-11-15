@@ -38,6 +38,12 @@ public class CustomerTest{
     assertEquals(25, customer.getMoney());
   }
 
+  @Test
+  public void hasPaymentTypeWithBalanceInWallet() {
+    Integer balance = wallet.get(PaymentType.MASTERCARD);
+    assertEquals(300, balance.intValue());
+  }
+
 
 
 }
