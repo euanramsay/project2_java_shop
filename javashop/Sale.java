@@ -4,6 +4,7 @@ import java.util.Collections;
 
 public class Sale {
   private Customer customer;
+  private PaymentType card;
   private Product product;
   private Shop shop;
 
@@ -13,16 +14,11 @@ public class Sale {
     this.shop = shop;
   }
 
-  // public void generateSale() {
-  //   customer.setMoney(customer.getMoney() - product.getCost());
-  //   shop.setSales(shop.getSales() + product.getCost());
-  // }
-
-  public void generateSale(PaymentType card) {
+  public void generateSale() {
     Integer amount = customer.wallet.get(card);
     int balance = amount.intValue();
     int cost = product.getCost();
-    int newBalance = balance - cost;
+    Integer newBalance = (Integer) balance - cost;
     customer.wallet.put(card, newBalance);
   }
 

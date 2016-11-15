@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class CustomerTest{
   Customer customer;
+  PaymentType card;
   Product product;
   Shop shop;
   Sale sale;
@@ -18,7 +19,7 @@ public class CustomerTest{
     customer = new Customer("Charlie Brown");
     product = new Product("Lemonade", 5);
     shop = new Shop("Lucys Lemonade", 0);
-    sale = new Sale(customer, product, shop);
+    sale = new Sale(customer, PaymentType.card, product, shop);
     wallet = new HashMap<PaymentType, Integer>();
     wallet.put(PaymentType.MASTERCARD, 300);
     basket = new ArrayList<Product>();
@@ -41,21 +42,6 @@ public class CustomerTest{
     customer.setPaymentType(PaymentType.VISA, 100);
     assertEquals(false, customer.wallet.isEmpty());
   }
-
-  // @Test
-  // public void canGetNameOfFirstCardInWallet() {
-  //   Object[] cards = customer.getCardTypes();
-  //   assertEquals("MASTERCARD", cards[0].toString());
-  // }
-
-  // @Test
-  // public void canBuyItem() {
-  //   sale.generateSale(PaymentType.MASTERCARD);
-  //   Integer amount = wallet.get(PaymentType.MASTERCARD);
-  //   int balance = amount.intValue();
-  //   assertEquals(295, balance);
-  // }
-
 
 
 }

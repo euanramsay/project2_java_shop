@@ -34,4 +34,14 @@ public class Shop {
     products.add(product);
   }
 
+  public void sellProduct(String productName, Customer customer) {
+    
+  }
+
+  //sellProduct method
+  //take in a product name
+  //take in a customer object
+  //remove the product from the products array
+  //call buyProduct on the customer (product)
+
 }

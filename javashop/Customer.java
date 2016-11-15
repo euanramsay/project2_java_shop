@@ -10,10 +10,11 @@ public class Customer {
   public HashMap<PaymentType, Integer> wallet;
   private ArrayList<Product> basket;
 
-public Customer(String name){
+public Customer(String name, Enum defaultCardType){
   this.name = name;
   this.wallet = new HashMap<>();
   this.basket = new ArrayList<Product>();
+  this.defaultCardType = defaultCardType;
 }
 
 public String getName() {
@@ -24,17 +25,13 @@ public void setName(String customerName) {
   name = customerName;
 }
 
-// public Object[] getCardTypes() {
-//   return wallet.keySet().toArray();
-// }
-
 public void setPaymentType(PaymentType card, Integer balance) {
   wallet.put(card, balance);
 }
 
-
-
-
+public void buyProduct(){
+  
+}
 
 
 }
