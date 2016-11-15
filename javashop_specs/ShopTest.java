@@ -1,5 +1,6 @@
 import javashop.*;
 
+import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
 import org.junit.*;
 
@@ -8,6 +9,7 @@ public class ShopTest{
   Product product;
   Shop shop;
   Sale sale;
+  ArrayList<Product> products;
 
   @Before 
   public void before() {
@@ -15,6 +17,7 @@ public class ShopTest{
     customer = new Customer("Charlie Brown");
     product = new Product("Lemonade", 5);
     sale = new Sale(customer, product, shop);
+    products = new ArrayList<Product>();
   }
 
   @Test

@@ -8,11 +8,12 @@ import java.util.ArrayList;
 public class Customer {
   private String name;
   public HashMap<PaymentType, Integer> wallet;
-  private ArrayList<Product> boughtItems;
+  private ArrayList<Product> basket;
 
 public Customer(String name){
   this.name = name;
   this.wallet = new HashMap<>();
+  this.basket = new ArrayList<Product>();
 }
 
 public String getName() {
