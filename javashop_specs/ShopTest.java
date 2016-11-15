@@ -12,7 +12,7 @@ public class ShopTest{
   @Before 
   public void before() {
     shop = new Shop("Lucys Lemonade", 0);
-    customer = new Customer("Charlie Brown", 30);
+    customer = new Customer("Charlie Brown");
     product = new Product("Lemonade", 5);
     sale = new Sale(customer, product, shop);
   }
@@ -27,11 +27,11 @@ public class ShopTest{
     assertEquals( 0, shop.getSales());
   }
 
-  @Test
-  public void canSellProduct() {
-    // shop.setSales(shop.getSales() + product.getCost());
-    sale.generateSale();
-    assertEquals(5, shop.getSales());
-  }
+  // @Test
+  // public void canSellProduct() {
+  //   // shop.setSales(shop.getSales() + product.getCost());
+  //   sale.generateSale();
+  //   assertEquals(5, shop.getSales());
+  // }
 
 }

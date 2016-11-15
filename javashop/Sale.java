@@ -13,9 +13,13 @@ public class Sale {
     this.shop = shop;
   }
 
+  // public void generateSale() {
+  //   customer.setMoney(customer.getMoney() - product.getCost());
+  //   shop.setSales(shop.getSales() + product.getCost());
+  // }
+
   public void generateSale() {
-    customer.setMoney(customer.getMoney() - product.getCost());
-    shop.setSales(shop.getSales() + product.getCost());
+    
   }
 
 

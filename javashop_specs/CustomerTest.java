@@ -13,7 +13,7 @@ public class CustomerTest{
 
   @Before 
   public void before() {
-    customer = new Customer("Charlie Brown", 30);
+    customer = new Customer("Charlie Brown");
     product = new Product("Lemonade", 5);
     shop = new Shop("Lucys Lemonade", 0);
     sale = new Sale(customer, product, shop);
@@ -26,23 +26,29 @@ public class CustomerTest{
     assertEquals( "Charlie Brown", customer.getName() ); 
   }
 
-  @Test
-  public void howMuchMoney() {
-    assertEquals(30, customer.getMoney());
-  }
+  // @Test
+  // public void howMuchMoney() {
+  //   assertEquals(30, customer.getMoney());
+  // }
 
-  @Test
-  public void canBuyProduct() {
-    // customer.setMoney(customer.getMoney() - product.getCost());
-    sale.generateSale();
-    assertEquals(25, customer.getMoney());
-  }
+  // @Test
+  // public void canBuyProduct() {
+  //   // customer.setMoney(customer.getMoney() - product.getCost());
+  //   sale.generateSale();
+  //   assertEquals(25, customer.getMoney());
+  // }
 
   @Test
   public void hasPaymentTypeWithBalanceInWallet() {
     Integer balance = wallet.get(PaymentType.MASTERCARD);
     assertEquals(300, balance.intValue());
   }
+
+  // @Test
+  // public void canPutCardsIntoWallet() {
+  //   customer.setPaymentType(PaymentType.VISA, 100);
+  //   assertEquals(false, customer.wallet.isEmpty())
+  // }
 
 
 
