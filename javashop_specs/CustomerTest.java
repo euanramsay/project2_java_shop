@@ -16,10 +16,10 @@ public class CustomerTest{
 
   @Before 
   public void before() {
-    customer = new Customer("Charlie Brown");
+    customer = new Customer("Charlie Brown", PaymentType.MASTERCARD);
     product = new Product("Lemonade", 5);
     shop = new Shop("Lucys Lemonade", 0);
-    sale = new Sale(customer, PaymentType.card, product, shop);
+    // sale = new Sale(customer, PaymentType.card, product, shop);
     wallet = new HashMap<PaymentType, Integer>();
     wallet.put(PaymentType.MASTERCARD, 300);
     basket = new ArrayList<Product>();
@@ -42,6 +42,5 @@ public class CustomerTest{
     customer.setPaymentType(PaymentType.VISA, 100);
     assertEquals(false, customer.wallet.isEmpty());
   }
-
 
 }

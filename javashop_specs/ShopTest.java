@@ -14,7 +14,7 @@ public class ShopTest{
   @Before 
   public void before() {
     shop = new Shop("Lucys Lemonade", 0);
-    customer = new Customer("Charlie Brown", ProductType.MASTERCARD);
+    customer = new Customer("Charlie Brown", PaymentType.MASTERCARD);
     product = new Product("Lemonade", 5);
     sale = new Sale(customer, product, shop);
     products = new ArrayList<Product>();
