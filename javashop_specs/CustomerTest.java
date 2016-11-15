@@ -26,20 +26,8 @@ public class CustomerTest{
 
   @Test
   public void hasName(){
-    assertEquals( "Charlie Brown", customer.getName() ); 
+    assertEquals("Charlie Brown", customer.getName());
   }
-
-  // @Test
-  // public void howMuchMoney() {
-  //   assertEquals(30, customer.getMoney());
-  // }
-
-  // @Test
-  // public void canBuyProduct() {
-  //   // customer.setMoney(customer.getMoney() - product.getCost());
-  //   sale.generateSale();
-  //   assertEquals(25, customer.getMoney());
-  // }
 
   @Test
   public void hasPaymentTypeWithBalanceInWallet() {

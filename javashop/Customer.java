@@ -24,9 +24,9 @@ public void setName(String customerName) {
   name = customerName;
 }
 
-public Object[] getCardTypes() {
-  return wallet.keySet().toArray();
-}
+// public Object[] getCardTypes() {
+//   return wallet.keySet().toArray();
+// }
 
 public void setPaymentType(PaymentType card, Integer balance) {
   wallet.put(card, balance);
