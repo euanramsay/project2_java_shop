@@ -40,15 +40,30 @@ public class CustomerTest{
 
   @Test
   public void hasPaymentTypeWithBalanceInWallet() {
-    Integer balance = wallet.get(PaymentType.MASTERCARD);
-    assertEquals(300, balance.intValue());
+    Integer amount = wallet.get(PaymentType.MASTERCARD);
+    int balance = amount.intValue();
+    assertEquals(300, balance);
+  }
+
+  @Test
+  public void canPutCardsIntoWallet() {
+    customer.setPaymentType(PaymentType.VISA, 100);
+    assertEquals(false, customer.wallet.isEmpty());
   }
 
   // @Test
-  // public void canPutCardsIntoWallet() {
-  //   customer.setPaymentType(PaymentType.VISA, 100);
-  //   assertEquals(false, customer.wallet.isEmpty())
+  // public void canGetNameOfFirstCardInWallet() {
+  //   Object[] cards = customer.getCardTypes();
+  //   assertEquals("MASTERCARD", cards[0].toString());
   // }
+
+  @Test
+  public void canBuyItem() {
+    sale.generateSale(PaymentType.MASTERCARD);
+    Integer amount = wallet.get(PaymentType.MASTERCARD);
+    int balance = amount.intValue();
+    assertEquals(295, balance);
+  }
 
 
 

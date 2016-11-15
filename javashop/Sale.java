@@ -18,8 +18,12 @@ public class Sale {
   //   shop.setSales(shop.getSales() + product.getCost());
   // }
 
-  public void generateSale() {
-    
+  public void generateSale(PaymentType card) {
+    Integer amount = customer.wallet.get(card);
+    int balance = amount.intValue();
+    int cost = product.getCost();
+    int newBalance = balance - cost;
+    customer.wallet.put(card, newBalance);
   }
 
 
