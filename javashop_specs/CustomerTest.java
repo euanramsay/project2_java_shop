@@ -9,7 +9,7 @@ public class CustomerTest{
   Product product;
   Shop shop;
   Sale sale;
-  HashMap<PaymentType, Integer> wallet = new HashMap<>();
+  HashMap<PaymentType, Integer> wallet;
 
   @Before 
   public void before() {
@@ -17,7 +17,8 @@ public class CustomerTest{
     product = new Product("Lemonade", 5);
     shop = new Shop("Lucys Lemonade", 0);
     sale = new Sale(customer, product, shop);
-    wallet.put(MASTERCARD, 300);
+    wallet = new HashMap<PaymentType, Integer>();
+    wallet.put(PaymentType.MASTERCARD, 300);
   }
 
   @Test
