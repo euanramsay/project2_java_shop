@@ -54,11 +54,17 @@ public class ShopTest{
     assertEquals(5, shop.getSales());
   }
 
-  // @Test
-  // public void canMakeSale() {
-  //   sale.generateSale();
-  //   assertEquals();
-  // }
+  @Test
+  public void canRefundProduct() {
+    shop.sellProduct("Lemonade", customer);
+
+    shop.refundProduct(product, customer);
+    assertEquals(0, customer.numberOfProductsInBag());
+    assertEquals(1, shop.getNumberOfProducts());
+    assertEquals(300, customer.getBalance(PaymentType.MASTERCARD));
+    assertEquals(0, shop.getSales());
+  }
+
 
 
 

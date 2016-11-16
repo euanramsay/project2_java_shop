@@ -45,6 +45,10 @@ public void bagProduct(Product product) {
   bag.add(product);
 }
 
+public void removeFromBag(Product product) {
+  bag.remove(product);
+}
+
 public int numberOfProductsInBag() {
   return bag.size();
 }
