@@ -42,8 +42,8 @@ public class CustomerTest{
 
   @Test
   public void canPutItemInBoughtBag() {
-    bag.add(product);
-    int items = bag.size();
+    customer.bagProduct(product);
+    int items = customer.numberOfProductsInBag();
     assertEquals(1, items);
   }
 

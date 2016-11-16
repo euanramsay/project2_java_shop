@@ -48,9 +48,13 @@ public int numberOfCards() {
 //   wallet.put(card, newBalance);
 // }
 
-// public void bagProduct(Product product) {
+public void bagProduct(Product product) {
+  bag.add(product);
+}
 
-// }
+public int numberOfProductsInBag() {
+  return bag.size();
+}
 
 
 }
