@@ -32,8 +32,9 @@ public void setPaymentType(PaymentType card, Integer balance) {
 
 public void buyProduct(PaymentType card, Product product){
     Integer integerFunds = wallet.get(card);
-    int funds = integerFunds.intValue();
-    int newBalance = funds - product.getCost();
+    int balance = integerFunds.intValue();
+    int cost = product.getCost();
+    Integer newBalance = (Integer) balance - cost;
     wallet.put(card, newBalance);
 
 }

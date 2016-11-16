@@ -43,4 +43,12 @@ public class CustomerTest{
     assertEquals(false, customer.wallet.isEmpty());
   }
 
+  // @Test
+  // public void canBuyProduct(){
+  //   customer.buyProduct(PaymentType.MASTERCARD, product);
+  //   Integer amount = wallet.get(PaymentType.MASTERCARD);
+  //   int balance = amount.intValue();
+  //   assertEquals(295, balance);
+  // }
+
 }

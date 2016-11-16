@@ -30,6 +30,13 @@ public class ShopTest{
     assertEquals( 0, shop.getSales());
   }
 
+  @Test
+  public void canSetProductForSale() {
+    products.add(product);
+    int items = products.size();
+    assertEquals(1, items);
+  }
+
   // @Test
   // public void canMakeSale() {
   //   sale.generateSale();
