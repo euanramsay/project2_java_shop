@@ -44,6 +44,14 @@ public class ShopTest{
     shop.setForSale(product);
     Product forSale = shop.forSale("Lemonade");
     assertEquals("Lemonade", forSale.getName());
+  } 
+
+  @Test
+  public void canSellProduct() {
+    shop.setForSale(product);
+    customer.setPaymentType(PaymentType.MASTERCARD, 300);
+    shop.sellProduct("Lemonade", customer);
+    assertEquals(1, customer.numberOfProductsInBag());
   }
 
   // @Test

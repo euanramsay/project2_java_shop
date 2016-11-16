@@ -9,7 +9,6 @@ public class CustomerTest{
   Customer customer;
   PaymentType card;
   Product product;
-  Shop shop;
   HashMap<PaymentType, Integer> wallet;
   ArrayList<Product> bag;
 
@@ -17,7 +16,6 @@ public class CustomerTest{
   public void before() {
     customer = new Customer("Charlie Brown", PaymentType.MASTERCARD);
     product = new Product("Lemonade", 5);
-    shop = new Shop("Lucys Lemonade", 0);
     wallet = new HashMap<PaymentType, Integer>();
     customer.setPaymentType(PaymentType.MASTERCARD, 300);
     bag = new ArrayList<Product>();

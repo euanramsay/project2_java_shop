@@ -46,8 +46,19 @@ public class Shop {
     return null;
   }
 
+  public void sellProduct(String productName, Customer customer) {
+    Product product = forSale(productName);
+    sales = sales + product.getCost();
+    products.remove(product);
+
+    customer.buyProduct(PaymentType.MASTERCARD, product);
+    customer.bagProduct(product);
+    
+  }
+
 
   // public void sellProduct(String productName, Customer customer) {
+
   //   sales = sales + product.getCost();
   //   products.remove(product);
   //   customer.buyProduct(PaymentType.MASTERCARD, product);
