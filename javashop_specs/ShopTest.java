@@ -49,6 +49,7 @@ public class ShopTest{
   public void canSellProduct() {
     shop.sellProduct("Lemonade", customer);
     assertEquals(1, customer.numberOfProductsInBag());
+    assertEquals(0, shop.getNumberOfProducts());
   }
 
   // @Test

@@ -7,7 +7,6 @@ import java.util.ArrayList;
 
 public class CustomerTest{
   Customer customer;
-  PaymentType card;
   Product product;
   HashMap<PaymentType, Integer> wallet;
   ArrayList<Product> bag;
@@ -17,8 +16,8 @@ public class CustomerTest{
     customer = new Customer("Charlie Brown", PaymentType.MASTERCARD);
     product = new Product("Lemonade", 5);
     wallet = new HashMap<PaymentType, Integer>();
-    customer.setPaymentType(PaymentType.MASTERCARD, 300);
     bag = new ArrayList<Product>();
+    customer.setPaymentType(PaymentType.MASTERCARD, 300);
   }
 
   @Test
