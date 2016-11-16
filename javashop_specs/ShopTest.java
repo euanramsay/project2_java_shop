@@ -50,6 +50,7 @@ public class ShopTest{
     shop.sellProduct("Lemonade", customer);
     assertEquals(1, customer.numberOfProductsInBag());
     assertEquals(0, shop.getNumberOfProducts());
+    assertEquals(295, customer.getBalance(PaymentType.MASTERCARD));
   }
 
   // @Test
