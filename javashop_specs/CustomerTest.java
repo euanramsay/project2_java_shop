@@ -56,4 +56,11 @@ public class CustomerTest{
     assertEquals(295, balance);
   }
 
+  @Test
+  public void canReturnProduct(){
+    customer.returnProduct(PaymentType.MASTERCARD, product);
+    int balance = customer.getBalance(PaymentType.MASTERCARD);
+    assertEquals(305, balance);
+  }
+
 }

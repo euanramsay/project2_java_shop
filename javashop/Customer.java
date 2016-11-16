@@ -9,7 +9,7 @@ public class Customer {
   private String name;
   private HashMap<PaymentType, Integer> wallet;
   private ArrayList<Product> bag;
-  private Enum defaultCardType;
+  private PaymentType defaultCardType;
 
 public Customer(String name, PaymentType defaultCardType){
   this.name = name;
@@ -54,6 +54,14 @@ public void buyProduct(PaymentType card, Product product){
   int balance = integerFunds.intValue();
   int cost = product.getCost();
   Integer newBalance = (Integer) balance - cost;
+  wallet.put(card, newBalance);
+}
+
+public void returnProduct(PaymentType card, Product product){
+  Integer integerFunds = wallet.get(card);
+  int balance = integerFunds.intValue();
+  int cost = product.getCost();
+  Integer newBalance = (Integer) balance + cost;
   wallet.put(card, newBalance);
 }
 
