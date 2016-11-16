@@ -34,16 +34,19 @@ public class Shop {
     products.add(product);
   }
 
-  // public void sellProduct(String productName, Customer customer) {
-   
+  // public Product forSale(String productName) {
+  //   for (Product product : products)
+  //     if (product.getName() == productName) {
+  //       return product;
   //     }
+  //   return null;
+  // }
 
-  public Product forSale(String productName) {
-    for (Product product : products)
-      if (product.getName() == productName) {
-        return product;
-      }
-    return null;
+  public void sellProduct(Product product, Customer customer) {
+    sales = sales + product.getCost();
+    products.remove(product);
+    // customer.buyProduct(PaymentType.MASTERCARD, product);
+    customer.bagProduct(product);
   }
 
 

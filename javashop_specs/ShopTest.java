@@ -36,11 +36,17 @@ public class ShopTest{
   }
 
   @Test
-  public void canSeeIfProductIsForSaleInShop() {
-    products.add(product);
-    shop.forSale("Lemonade");
-    assertEquals("Lemonade", product.getName());
+  public void canSellProduct() {
+    shop.sellProduct(product, customer);
+    assertEquals(5, shop.getSales());
   }
+
+  // @Test
+  // public void canSeeIfProductIsForSaleInShop() {
+  //   products.add(product);
+  //   Product forSale = shop.forSale("Lemonade");
+  //   assertEquals("Lemonade", forSale.getName());
+  // }
 
   // @Test
   // public void canMakeSale() {
