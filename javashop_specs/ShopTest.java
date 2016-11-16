@@ -51,6 +51,7 @@ public class ShopTest{
     assertEquals(1, customer.numberOfProductsInBag());
     assertEquals(0, shop.getNumberOfProducts());
     assertEquals(295, customer.getBalance(PaymentType.MASTERCARD));
+    assertEquals(5, shop.getSales());
   }
 
   // @Test
