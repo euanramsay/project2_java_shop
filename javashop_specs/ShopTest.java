@@ -8,14 +8,14 @@ public class ShopTest{
   Customer customer;
   Product product;
   Shop shop;
-  ArrayList<Product> products;
+  // ArrayList<Product> testProducts;
 
   @Before 
   public void before() {
     shop = new Shop("Lucys Lemonade", 0);
     customer = new Customer("Charlie Brown", PaymentType.MASTERCARD);
     product = new Product("Lemonade", 5);
-    products = new ArrayList<Product>();
+    // testProducts = new ArrayList<Product>();
   }
 
   @Test
@@ -28,17 +28,17 @@ public class ShopTest{
     assertEquals( 0, shop.getSales());
   }
 
-  @Test
-  public void canSetProductForSale() {
-    products.add(product);
-    int items = products.size();
-    assertEquals(1, items);
-  }
+  // @Test
+  // public void canSetProductForSale() {
+  //   products.add(product);
+  //   int items = products.size();
+  //   assertEquals(1, items);
+  // }
 
   @Test
-  public void canSellProduct() {
-    shop.sellProduct(product, customer);
-    assertEquals(5, shop.getSales());
+  public void canGetProductFromString() {
+    shop.setForSale(product);
+    assertEquals(product, shop.forSale("Lemonade"));
   }
 
   // @Test

@@ -34,20 +34,21 @@ public class Shop {
     products.add(product);
   }
 
-  // public Product forSale(String productName) {
-  //   for (Product product : products)
-  //     if (product.getName() == productName) {
-  //       return product;
-  //     }
-  //   return null;
-  // }
-
-  public void sellProduct(Product product, Customer customer) {
-    sales = sales + product.getCost();
-    products.remove(product);
-    // customer.buyProduct(PaymentType.MASTERCARD, product);
-    customer.bagProduct(product);
+  public Product forSale(String productName) {
+    for (Product item : products)
+      if (productName.equals(item.getName())) {
+        return item;
+      }
+    return null;
   }
+
+
+  // public void sellProduct(String productName, Customer customer) {
+  //   sales = sales + product.getCost();
+  //   products.remove(product);
+  //   customer.buyProduct(PaymentType.MASTERCARD, product);
+  //   customer.bagProduct(product);
+  // }
 
 
   //sellProduct method
