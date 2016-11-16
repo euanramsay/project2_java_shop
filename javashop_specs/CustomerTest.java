@@ -10,7 +10,6 @@ public class CustomerTest{
   PaymentType card;
   Product product;
   Shop shop;
-  Sale sale;
   HashMap<PaymentType, Integer> wallet;
   ArrayList<Product> bag;
 
@@ -19,9 +18,8 @@ public class CustomerTest{
     customer = new Customer("Charlie Brown", PaymentType.MASTERCARD);
     product = new Product("Lemonade", 5);
     shop = new Shop("Lucys Lemonade", 0);
-    // sale = new Sale(customer, PaymentType.card, product, shop);
     wallet = new HashMap<PaymentType, Integer>();
-    wallet.put(PaymentType.MASTERCARD, 300);
+    customer.setPaymentType(PaymentType.MASTERCARD, 300);
     bag = new ArrayList<Product>();
   }
 
@@ -32,15 +30,14 @@ public class CustomerTest{
 
   @Test
   public void hasPaymentTypeWithBalanceInWallet() {
-    Integer amount = wallet.get(PaymentType.MASTERCARD);
-    int balance = amount.intValue();
+    int balance = customer.getBalance(PaymentType.MASTERCARD);
     assertEquals(300, balance);
   }
 
   @Test
   public void canPutCardsIntoWallet() {
     customer.setPaymentType(PaymentType.VISA, 100);
-    assertEquals(false, customer.wallet.isEmpty());
+    assertEquals(2, customer.numberOfCards());
   }
 
   @Test
@@ -48,6 +45,12 @@ public class CustomerTest{
     bag.add(product);
     int items = bag.size();
     assertEquals(1, items);
+  }
+
+  @Test
+  public void canGetBalanceOfCard() {
+    int balance = customer.getBalance(PaymentType.MASTERCARD);
+    assertEquals(300, balance);
   }
 
   // @Test

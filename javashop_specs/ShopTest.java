@@ -8,7 +8,6 @@ public class ShopTest{
   Customer customer;
   Product product;
   Shop shop;
-  Sale sale;
   ArrayList<Product> products;
 
   @Before 
@@ -16,7 +15,6 @@ public class ShopTest{
     shop = new Shop("Lucys Lemonade", 0);
     customer = new Customer("Charlie Brown", PaymentType.MASTERCARD);
     product = new Product("Lemonade", 5);
-    sale = new Sale(customer, product, shop);
     products = new ArrayList<Product>();
   }
 

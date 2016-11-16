@@ -7,13 +7,13 @@ import java.util.ArrayList;
 
 public class Customer {
   private String name;
-  public HashMap<PaymentType, Integer> wallet;
+  private HashMap<PaymentType, Integer> wallet;
   private ArrayList<Product> bag;
   private Enum defaultCardType;
 
 public Customer(String name, Enum defaultCardType){
   this.name = name;
-  this.wallet = new HashMap<>();
+  this.wallet = new HashMap<PaymentType, Integer>();
   this.bag = new ArrayList<Product>();
   this.defaultCardType = defaultCardType;
 }
@@ -30,17 +30,27 @@ public void setPaymentType(PaymentType card, Integer balance) {
   wallet.put(card, balance);
 }
 
-public void buyProduct(PaymentType card, Product product){
+public int getBalance(PaymentType card) {
   Integer integerFunds = wallet.get(card);
   int balance = integerFunds.intValue();
-  int cost = product.getCost();
-  Integer newBalance = (Integer) balance - cost;
-  wallet.put(card, newBalance);
+  return balance;
 }
 
-public void bagProduct(Product product) {
-
+public int numberOfCards() {
+  return wallet.size();
 }
+
+// public void buyProduct(PaymentType card, Product product){
+//   Integer integerFunds = wallet.get(card);
+//   int balance = integerFunds.intValue();
+//   int cost = product.getCost();
+//   Integer newBalance = (Integer) balance - cost;
+//   wallet.put(card, newBalance);
+// }
+
+// public void bagProduct(Product product) {
+
+// }
 
 
 }
