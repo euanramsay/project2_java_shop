@@ -53,12 +53,11 @@ public class CustomerTest{
     assertEquals(300, balance);
   }
 
-  // @Test
-  // public void canBuyProduct(){
-  //   customer.buyProduct(PaymentType.MASTERCARD, product);
-  //   Integer amount = wallet.get(PaymentType.MASTERCARD);
-  //   int balance = amount.intValue();
-  //   assertEquals(295, balance);
-  // }
+  @Test
+  public void canBuyProduct(){
+    customer.buyProduct(PaymentType.MASTERCARD, product);
+    int balance = customer.getBalance(PaymentType.MASTERCARD);
+    assertEquals(295, balance);
+  }
 
 }

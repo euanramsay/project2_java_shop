@@ -40,20 +40,20 @@ public int numberOfCards() {
   return wallet.size();
 }
 
-// public void buyProduct(PaymentType card, Product product){
-//   Integer integerFunds = wallet.get(card);
-//   int balance = integerFunds.intValue();
-//   int cost = product.getCost();
-//   Integer newBalance = (Integer) balance - cost;
-//   wallet.put(card, newBalance);
-// }
-
 public void bagProduct(Product product) {
   bag.add(product);
 }
 
 public int numberOfProductsInBag() {
   return bag.size();
+}
+
+public void buyProduct(PaymentType card, Product product){
+  Integer integerFunds = wallet.get(card);
+  int balance = integerFunds.intValue();
+  int cost = product.getCost();
+  Integer newBalance = (Integer) balance - cost;
+  wallet.put(card, newBalance);
 }
 
 
