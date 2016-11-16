@@ -34,14 +34,24 @@ public class Shop {
     products.add(product);
   }
 
-  public void sellProduct(String productName, Customer customer) {
-    
+  // public void sellProduct(String productName, Customer customer) {
+   
+  //     }
+
+  public Product forSale(String productName) {
+    for (Product product : products)
+      if (product.getName() == productName) {
+        return product;
+      }
+    return null;
   }
+
 
   //sellProduct method
   //take in a product name
   //take in a customer object
   //remove the product from the products array
   //call buyProduct on the customer (product)
+
 
 }

@@ -35,10 +35,19 @@ public class ShopTest{
     assertEquals(1, items);
   }
 
+  @Test
+  public void canSeeIfProductIsForSaleInShop() {
+    products.add(product);
+    shop.forSale("Lemonade");
+    assertEquals("Lemonade", "Lemonade");
+  }
+
   // @Test
   // public void canMakeSale() {
   //   sale.generateSale();
   //   assertEquals();
   // }
+
+
 
 }
