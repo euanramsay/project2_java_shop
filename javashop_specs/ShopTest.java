@@ -28,12 +28,12 @@ public class ShopTest{
     assertEquals( 0, shop.getSales());
   }
 
-  // @Test
-  // public void canSetProductForSale() {
-  //   products.add(product);
-  //   int items = products.size();
-  //   assertEquals(1, items);
-  // }
+  @Test
+  public void canSetProductForSale() {
+    shop.setForSale(product);
+    int items = shop.getNumberOfProducts();
+    assertEquals(1, items);
+  }
 
   @Test
   public void canGetProductFromString() {

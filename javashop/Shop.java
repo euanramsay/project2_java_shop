@@ -22,6 +22,10 @@ public class Shop {
     return sales;
   }
 
+  public int getNumberOfProducts () {
+    return products.size();
+  }
+
   public void setName(String shopName) {
     name = shopName;
   }
