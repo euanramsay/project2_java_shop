@@ -14,6 +14,8 @@ public class ShopTest{
     shop = new Shop("Lucys Lemonade", 0);
     customer = new Customer("Charlie Brown", PaymentType.MASTERCARD);
     product = new Product("Lemonade", 5);
+    shop.setForSale(product);
+    customer.setPaymentType(PaymentType.MASTERCARD, 300);
   }
 
   @Test
@@ -28,28 +30,23 @@ public class ShopTest{
 
   @Test
   public void canSetProductForSale() {
-    shop.setForSale(product);
     int items = shop.getNumberOfProducts();
     assertEquals(1, items);
   }
 
   @Test
   public void canGetProductFromString() {
-    shop.setForSale(product);
     assertEquals(product, shop.forSale("Lemonade"));
   }
 
   @Test
   public void canSeeIfProductIsForSaleInShop() {
-    shop.setForSale(product);
     Product forSale = shop.forSale("Lemonade");
     assertEquals("Lemonade", forSale.getName());
   } 
 
   @Test
   public void canSellProduct() {
-    shop.setForSale(product);
-    customer.setPaymentType(PaymentType.MASTERCARD, 300);
     shop.sellProduct("Lemonade", customer);
     assertEquals(1, customer.numberOfProductsInBag());
   }
