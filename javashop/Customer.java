@@ -11,11 +11,12 @@ public class Customer {
   private ArrayList<Product> bag;
   private Enum defaultCardType;
 
-public Customer(String name, Enum defaultCardType){
+public Customer(String name, PaymentType defaultCardType){
   this.name = name;
   this.wallet = new HashMap<PaymentType, Integer>();
   this.bag = new ArrayList<Product>();
   this.defaultCardType = defaultCardType;
+  this.setPaymentType(defaultCardType, 300);
 }
 
 public String getName() {

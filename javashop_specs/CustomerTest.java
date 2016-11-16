@@ -17,7 +17,6 @@ public class CustomerTest{
     product = new Product("Lemonade", 5);
     wallet = new HashMap<PaymentType, Integer>();
     bag = new ArrayList<Product>();
-    customer.setPaymentType(PaymentType.MASTERCARD, 300);
   }
 
   @Test
