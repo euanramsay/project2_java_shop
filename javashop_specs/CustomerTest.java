@@ -12,7 +12,7 @@ public class CustomerTest{
   Shop shop;
   Sale sale;
   HashMap<PaymentType, Integer> wallet;
-  ArrayList<Product> basket;
+  ArrayList<Product> bag;
 
   @Before 
   public void before() {
@@ -22,7 +22,7 @@ public class CustomerTest{
     // sale = new Sale(customer, PaymentType.card, product, shop);
     wallet = new HashMap<PaymentType, Integer>();
     wallet.put(PaymentType.MASTERCARD, 300);
-    basket = new ArrayList<Product>();
+    bag = new ArrayList<Product>();
   }
 
   @Test
@@ -41,6 +41,13 @@ public class CustomerTest{
   public void canPutCardsIntoWallet() {
     customer.setPaymentType(PaymentType.VISA, 100);
     assertEquals(false, customer.wallet.isEmpty());
+  }
+
+  @Test
+  public void canPutItemInBoughtBag() {
+    bag.add(product);
+    int items = bag.size();
+    assertEquals(1, items);
   }
 
   // @Test

@@ -30,12 +30,12 @@ public class Shop {
     sales = shopSales;
   }
 
-  public void setProductsForSale(Product product) {
+  public void setForSale(Product product) {
     products.add(product);
   }
 
   public void sellProduct(String productName, Customer customer) {
-    
+
   }
 
   //sellProduct method
