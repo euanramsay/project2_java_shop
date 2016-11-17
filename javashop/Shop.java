@@ -68,21 +68,4 @@ public class Shop {
     
   }
 
-
-  // public void sellProduct(String productName, Customer customer) {
-
-  //   sales = sales + product.getCost();
-  //   products.remove(product);
-  //   customer.buyProduct(PaymentType.MASTERCARD, product);
-  //   customer.bagProduct(product);
-  // }
-
-
-  //sellProduct method
-  //take in a product name
-  //take in a customer object
-  //remove the product from the products array
-  //call buyProduct on the customer (product)
-
-
 }

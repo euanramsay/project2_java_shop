@@ -61,6 +61,14 @@ public void buyProduct(PaymentType card, Product product){
   wallet.put(card, newBalance);
 }
 
+public Product forReturn(String productName) {
+  for (Product item : bag)
+    if (productName.equals(item.getName())) {
+      return item;
+    }
+  return null;
+}
+
 public void returnProduct(PaymentType card, Product product){
   Integer integerFunds = wallet.get(card);
   int balance = integerFunds.intValue();

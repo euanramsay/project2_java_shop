@@ -44,6 +44,13 @@ public class CustomerTest{
   }
 
   @Test
+  public void canSeeIfProductForReturnIsInBag() {
+    customer.bagProduct(product);
+    Product canReturn = customer.forReturn("Lemonade");
+    assertEquals("Lemonade", canReturn.getName());
+  } 
+
+  @Test
   public void canGetBalanceOfCard() {
     int balance = customer.getBalance(PaymentType.MASTERCARD);
     assertEquals(300, balance);
