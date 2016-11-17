@@ -15,7 +15,6 @@ public class ShopTest{
     customer = new Customer("Charlie Brown", PaymentType.MASTERCARD);
     product = new Product("Lemonade", 5);
     shop.setForSale(product);
-    customer.setPaymentType(PaymentType.MASTERCARD, 300);
   }
 
   @Test

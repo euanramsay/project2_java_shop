@@ -2,5 +2,7 @@ package javashop;
 
 public enum PaymentType {
   MASTERCARD,
-  VISA;
+  VISA,
+  PAYPAL,
+  APPLEPAY;
 }
