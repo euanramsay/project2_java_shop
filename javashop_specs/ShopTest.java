@@ -12,7 +12,7 @@ public class ShopTest{
   @Before 
   public void before() {
     shop = new Shop("Lucys Lemonade", 0);
-    customer = new Customer("Charlie Brown", PaymentType.MASTERCARD);
+    customer = new Customer("Snoopy", PaymentType.MASTERCARD);
     product = new Product("Lemonade", 5);
     shop.setForSale(product);
   }
