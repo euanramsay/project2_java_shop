@@ -13,7 +13,7 @@ public class CustomerTest{
 
   @Before 
   public void before() {
-    customer = new Customer("Charlie Brown", PaymentType.MASTERCARD);
+    customer = new Customer("Snoopy", PaymentType.MASTERCARD);
     product = new Product("Lemonade", 5);
     wallet = new HashMap<PaymentType, Integer>();
     bag = new ArrayList<Product>();
