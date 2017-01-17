@@ -1,0 +1,1 @@
+My second project at CodeClan was to create a model for a shopping basket in Java. The brief stated that the shop must be able to - 1. Make a Sale - 2. Give a refund - 3. Report on income. The Customer should have a choice of payment methods available. The code was written in Sublime text editor with no frameworks.
